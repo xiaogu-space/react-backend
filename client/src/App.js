@@ -8,6 +8,8 @@ import Home from './components/home'
 import Plan from './components/plan'
 import TestRouter from './components/testrouter.js'
 
+
+
 // 引入路由
 import {
   BrowserRouter as Router,
@@ -29,12 +31,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Users</h1>
-        {this.state.users.map(user =>
+        {/*{this.state.users.map(user =>
           <div key={user.id}>{user.username}</div>
-        )}
-
-        <Button type="primary">Button</Button>
+        )}*/}
         <Router history = {history}>
             <div className="contentBox">
               <ul className="nav">
@@ -47,7 +46,7 @@ class App extends Component {
                 <Route path="/plan" component={Plan}/>
                 <Route path="/test" component={TestRouter}/>
               </div>
-          </div>
+            </div>
         </Router>
       </div>
     );
