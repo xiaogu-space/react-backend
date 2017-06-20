@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Button from 'antd/lib/button';
+
 class App extends Component {
   state = {users: []};
   componentDidMount() {
@@ -17,6 +19,7 @@ class App extends Component {
         {this.state.users.map(user =>
           <div key={user.id}>{user.username}</div>
         )}
+        <Button type="primary">Button</Button>
       </div>
     );
   }
